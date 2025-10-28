@@ -1,92 +1,182 @@
+/* ===== ESTILO GENERAL ===== */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f2f6fc;
-    margin: 0;
-    padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f0f4ff, #dbe9ff);
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
+/* ===== CABECERA ===== */
 header {
-    background: #00509e;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background: linear-gradient(90deg, #004aad, #0077b6);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+/* ===== CONTENEDOR PRINCIPAL ===== */
 .container {
-    width: 80%;
-    margin: 30px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 85%;
+  max-width: 1100px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
-    text-align: center;
-    color: #003566;
+  text-align: center;
+  color: #023e8a;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0077b6;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
+/* ===== FORMULARIOS ===== */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input, textarea, select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  resize: none;
 }
 
+input:focus, textarea:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 5px rgba(0, 119, 182, 0.4);
+}
+
+/* ===== BOTONES ===== */
 button {
-    background: #0077b6;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 button:hover {
-    background: #005f8e;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th {
-    background: #0077b6;
-    color: white;
-    padding: 10px;
-}
-
-td {
-    padding: 8px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: #0077b6;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #023e8a;
+  background: #005f8e;
+  transform: scale(1.05);
 }
 
 .btn-cancelar {
-    background: #adb5bd;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    text-align: center;
-    display: inline-block;
+  background: #adb5bd;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.btn-cancelar:hover {
+  background: #868e96;
+  transform: scale(1.03);
+}
+
+/* ===== TABLAS ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+th {
+  background: #0077b6;
+  color: white;
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+td {
+  background: #ffffff;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover td {
+  background: #f1f9ff;
+}
+
+/* ===== ENLACES ===== */
+a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+a:hover {
+  color: #023e8a;
+  transform: scale(1.05);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #555;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  header {
+    font-size: 22px;
+    padding: 20px 5px;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+  }
 }
