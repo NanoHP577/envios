@@ -74,7 +74,7 @@ input:focus, textarea:focus {
 
 /* ===== BOTONES ===== */
 button {
-  background: #0077b6;
+  background: #034366;
   color: white;
   border: none;
   padding: 12px;
@@ -86,7 +86,7 @@ button {
 }
 
 button:hover {
-  background: #005f8e;
+  background: #014568;
   transform: scale(1.05);
 }
 
