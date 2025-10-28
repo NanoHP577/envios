@@ -10,7 +10,7 @@ $envios = $pdo->query("SELECT * FROM envios ORDER BY fecha DESC")->fetchAll(PDO:
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>📦 Sistema de Gestión de Envíos</h1></header>
+    <header><h1>📦 Sistema de Gestión de Envíos  nnn</h1></header>
 
     <div class="container">
         <h2>Registrar nuevo envío</h2>
