@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$dbname = "envios_db";
-$user = "root";
-$pass = "";
+$host = "mysql-juandy.alwaysdata.net";
+$dbname = "juandy_envios";
+$user = "juandy";
+$pass = "caT96AHSqF2mDBy";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
